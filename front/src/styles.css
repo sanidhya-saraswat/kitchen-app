@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+    font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0;
+		color:rgb(27, 27, 27);
+}
+.mat-snack-bar-container
+{
+margin:0 20px 30px 20px !important;
+width:auto;
+border-radius:3px !important;
+}
+input:-moz-read-only { 
+	cursor: no-drop;
+}
+
+input:read-only { 
+  cursor: no-drop;
+}
+mat-hint
+{
+	color:rgb(54, 54, 54) !important;
+	font-size: 14px;
+}
+.info-btn
+{
+	margin: 10px 0px !important;
+}

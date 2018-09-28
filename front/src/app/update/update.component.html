@@ -1,0 +1,19 @@
+<div id="base">
+    <div id="title">Set Predicted Value</div>
+      <form [formGroup]="updateForm" (ngSubmit)="onFormSubmit()">
+        <mat-form-field>
+        <input matInput formControlName="dishId" type="number" placeholder="Dish Id" (focusout)="getDishInfo()" required>
+        <mat-hint>Sample ids: 1, 3, 4, 5</mat-hint>
+    </mat-form-field>
+    <button class="info-btn" mat-stroked-button type="button" color="primary" (click)="getDishInfo()">Get Dish Info</button>
+    <mat-form-field>
+      <input matInput formControlName="name" type="text" placeholder="Dish Name" readonly>
+     </mat-form-field>
+  <mat-form-field>
+   <input matInput formControlName="predicted" type="number" placeholder="Predicted Value" required>
+  </mat-form-field>
+    <div id="btn-div"><button mat-raised-button color="primary" type="submit" [disabled]="updateForm.invalid">Save</button>
+      <button mat-stroked-button color="primary" type="button"  (click)="closeDialog()">Cancel</button>
+    </div>
+  </form>
+  </div>

@@ -1,0 +1,26 @@
+<div id="top-div">
+  <button mat-raised-button color="primary" (click)="placeOrder()">Place Order</button>
+  <button mat-raised-button color="primary" (click)="setPredictedValue()">Set Predicted Value</button>
+  <button mat-raised-button color="primary" (click)="generateReport()">Generate Report</button>
+</div>
+<div id="head">Kitchen Display System</div>
+<div id="table-div">
+<table>
+  <tr>
+    <th>Dish Id</th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Created Till Now</th>
+    <th>Predicted</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let item of orders">
+    <td>{{item.dishId}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.quantity}}</td>
+    <td>{{item.createdTillNow}}</td>
+    <td>{{item.predicted}}</td>
+    <td><button mat-raised-button color="primary" (click)="done(item)">Done</button></td>
+  </tr>
+</table>
+</div>

@@ -1,0 +1,19 @@
+<div id="base">
+  <div id="title">Place Order</div>
+    <form [formGroup]="placeOrderForm" (ngSubmit)="onFormSubmit()">
+      <mat-form-field>
+      <input matInput formControlName="dishId" type="number" placeholder="Dish Id" (focusout)="getDishName()" required>
+      <mat-hint>Sample ids: 1, 3, 4, 5</mat-hint>
+  </mat-form-field>
+  <!-- <button class="info-btn" mat-stroked-button type="button" color="primary" (click)="getDishName()">Get Dish Info</button> -->
+  <mat-form-field id="name-input">
+    <input matInput formControlName="name" type="text" placeholder="Dish Name" readonly>
+   </mat-form-field>
+<mat-form-field>
+ <input matInput formControlName="quantity" type="number" placeholder="quantity" required>
+</mat-form-field>
+  <div id="btn-div"><button mat-raised-button color="primary" type="submit" [disabled]="placeOrderForm.invalid">Place</button>
+    <button mat-stroked-button color="primary" type="button"  (click)="closeDialog()">Cancel</button>
+  </div>
+</form>
+</div>
